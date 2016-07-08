@@ -1,11 +1,13 @@
-#home {
+#home
+{
     height: 100%;
 
     background-color: @rmc-color-1;
 
     .dont-select;
 
-    .flex-content {
+    .flex-content
+    {
         position: relative;
         z-index: 2;
         top: 0;
@@ -16,7 +18,8 @@
 
         .flex(column, space-between, center);
 
-        & > .top-content {
+        & > .top-content
+        {
             width: 100%;
             margin-top: @pixel-proportion * -1;
             margin-right: @pixel-proportion * -2;
@@ -24,13 +27,16 @@
             .flex(row, flex-end, center);
         }
 
-        & > .middle-content {
+        & > .middle-content
+        {
             width: 100%;
 
             .flex(row, space-between, center);
 
-            & > span {
-                & > .fa {
+            & > span
+            {
+                & > .fa
+                {
                     color: @rmc-white;
 
                     .transition(.2s);
@@ -38,31 +44,37 @@
                     .rmc-texts-extra-large;
                 }
 
-                & > .fa-angle-left {
+                & > .fa-angle-left
+                {
                     position: relative;
                     left: @pixel-proportion * 3;
 
                     padding-right: @pixel-proportion * 5;
-                    &:hover {
+                    &:hover
+                    {
                         left: 0;
                     }
                 }
 
-                & > .fa-angle-right {
+                & > .fa-angle-right
+                {
                     position: relative;
                     left: @pixel-proportion * -3;
 
                     padding-left: @pixel-proportion * 5;
-                    &:hover {
+                    &:hover
+                    {
                         left: 0;
                     }
                 }
             }
 
-            & > .home-logo {
+            & > .home-logo
+            {
                 .flex(column, center, center);
 
-                & > hr {
+                & > hr
+                {
                     width: 400px;
                     margin-top: @pixel-proportion * 2;
                     margin-bottom: @pixel-proportion;
@@ -70,11 +82,13 @@
                     border-bottom: 2px solid @rmc-color-1;
                 }
 
-                & > span {
+                & > span
+                {
                     width: 350px;
 
                     text-align: center;
-                    & > span {
+                    & > span
+                    {
                         color: @rmc-white;
 
                         .uper-case;
@@ -85,12 +99,14 @@
             }
         }
 
-        & > .bottom-content {
+        & > .bottom-content
+        {
             width: 100%;
 
             .flex(row, center, center);
 
-            & > a > .fa {
+            & > a > .fa
+            {
                 position: relative;
                 top: @pixel-proportion * -2;
 
@@ -103,7 +119,8 @@
                 .rmc-texts-large;
                 .cursor-pointer;
 
-                &:hover {
+                &:hover
+                {
                     top: 0;
                 }
             }
@@ -114,7 +131,8 @@
 
 
 
-#ofestival {
+#ofestival
+{
     height: auto;
     min-height: 100%;
 
@@ -124,7 +142,8 @@
     background-position: center center;
     background-size: 250%;
 
-    & > .texto-festival {
+    & > .texto-festival
+    {
         width: 60%;
         height: auto;
         margin-right: auto;
@@ -135,11 +154,13 @@
 
         .flex(column, center, center);
 
-        & > img {
+        & > img
+        {
             width: 300px;
         }
 
-        & > h1 {
+        & > h1
+        {
             width: 100%;
             margin-top: @pixel-proportion * -2;
 
@@ -147,14 +168,16 @@
             // text-shadow: 0 0 10px @rmc-color-2;
         }
 
-        & > h2 {
+        & > h2
+        {
             position: relative;
             top: -20px;
 
             color: @rmc-white;
         }
 
-        & > p {
+        & > p
+        {
             position: relative;
 
             padding: @pixel-proportion * 3;
@@ -166,7 +189,8 @@
             .border-box;
         }
 
-        & > #patrocinadores {
+        & > #patrocinadores
+        {
             width: 100%;
             height: auto;
             padding: @pixel-proportion * 3;
@@ -176,34 +200,40 @@
 
             .border-box;
 
-            & > .flex-content {
+            & > .flex-content
+            {
                 width: 100%;
                 height: auto;
 
-                & > h2 {
+                & > h2
+                {
                     margin-top: @pixel-proportion;
                     margin-bottom: @pixel-proportion;
 
                     color: @rmc-white;
                 }
 
-                & > .top-content {
+                & > .top-content
+                {
                     width: 100%;
                     height: auto;
 
-                    & img {
+                    & img
+                    {
                         max-width: 260px;
-                        max-height: 80px;
+                        max-height: 150px;
                         padding: @pixel-proportion;
                     }
                 }
 
-                & > .bottom-content {
+                & > .bottom-content
+                {
                     width: 100%;
                     height: auto;
 
 
-                    & img {
+                    & img
+                    {
                         height: 50px;
                         padding: @pixel-proportion;
                     }
@@ -213,7 +243,8 @@
     }
 }
 
-#programacao {
+#programacao
+{
     height: auto;
     min-height: 100%;
 
@@ -223,7 +254,8 @@
     background-position: center center;
     background-size: 400%;
 
-    & > .programacao-festival {
+    & > .programacao-festival
+    {
         width: 60%;
         height: auto;
         margin-right: auto;
@@ -234,7 +266,8 @@
 
         .flex(column, center, center);
 
-        & > h1 {
+        & > h1
+        {
             width: 100%;
             margin-top: @pixel-proportion * -2;
 
@@ -242,14 +275,16 @@
             // text-shadow: 0 0 10px @rmc-color-2;
         }
 
-        & > h2 {
+        & > h2
+        {
             position: relative;
             top: -10px;
 
             color: @rmc-white;
         }
 
-        & > .tabela {
+        & > .tabela
+        {
             position: relative;
 
             width: 100%;
@@ -263,12 +298,14 @@
             .flex(column, flex-start, flex-start);
             .border-box;
 
-            & > h2 {
+            & > h2
+            {
                 margin-top: @pixel-proportion * 2;
                 margin-left: @pixel-proportion * 2;
             }
 
-            & > .linha {
+            & > .linha
+            {
                 position: relative;
 
                 width: 100%;
@@ -277,7 +314,8 @@
 
                 .flex(row, flex-start, center);
 
-                & > .coluna-esquerda {
+                & > .coluna-esquerda
+                {
                     width: 10%;
                     margin-right: -1px;
 
@@ -296,7 +334,8 @@
                     .flex(row, center, center);
                 }
 
-                & > .coluna-meio {
+                & > .coluna-meio
+                {
                     width: 25%;
                     margin-right: -1px;
                     padding: @pixel-proportion * 2;
@@ -314,7 +353,8 @@
                     .flex(row, center, center);
                 }
 
-                & > .coluna-direita {
+                & > .coluna-direita
+                {
                     padding: @pixel-proportion * 2;
 
                     text-align: left;
@@ -332,35 +372,44 @@
     }
 }
 
-#espacos {
+#espacos
+{
     height: 100%;
     padding: 0;
 
     .dont-select;
 
-    & > ul {
+    & > ul
+    {
         width: 100%;
         height: 50%;
 
-        &:first-child {
-            & > li {
+        &:first-child
+        {
+            & > li
+            {
                 background: @rmc-color-2;
-                &:nth-child(even) {
+                &:nth-child(even)
+                {
                     background: @rmc-color-1;
                 }
             }
         }
 
-        &:last-child {
-            & > li {
+        &:last-child
+        {
+            & > li
+            {
                 background: @rmc-color-1;
-                &:nth-child(even) {
+                &:nth-child(even)
+                {
                     background: @rmc-color-2;
                 }
             }
         }
 
-        & > li {
+        & > li
+        {
             display: inline-block;
 
             width: 20%;
@@ -368,30 +417,36 @@
 
             color: @rmc-white;
 
-            & > .flex-content {
+            & > .flex-content
+            {
                 height: 100%;
 
                 .flex(column, center, center);
                 .transition(.2s);
 
-                &:hover {
+                &:hover
+                {
                     background-color: @rmc-black;
 
-                    & > i {
+                    & > i
+                    {
                         transform: scale(1.3);
                     }
 
-                    & > span {
+                    & > span
+                    {
                         top: @pixel-proportion * 2;
                     }
                 }
 
-                & > i {
+                & > i
+                {
                     .transition(.2s);
                     .rmc-texts-large;
                 }
 
-                & > span {
+                & > span
+                {
                     position: relative;
                     top: 0;
 
@@ -405,7 +460,8 @@
     }
 }
 
-#inscricoes {
+#inscricoes
+{
     height: auto;
 
     text-align: center;
@@ -419,38 +475,44 @@
 
     .dont-select;
 
-    & > h1 {
+    & > h1
+    {
         width: 60%;
         margin-top: @pixel-proportion * 4;
         margin-right: auto;
         margin-left: auto;
     }
-    & > .campos-incricoes {
+    & > .campos-incricoes
+    {
         width: 60%;
         margin-right: auto;
         margin-left: auto;
 
         .flex(column, center, center);
 
-        & > .input-group {
+        & > .input-group
+        {
             width: 100%;
 
             .flex(row, center, center);
 
-            & > .input-item {
+            & > .input-item
+            {
                 width: 100%;
                 margin: @pixel-proportion;
 
                 .flex(column, center, center);
 
-                & > label {
+                & > label
+                {
                     .open-sans-light;
                     .rmc-texts-small;
                     .lower-case;
                 }
 
                 & > input,
-                & > textarea {
+                & > textarea
+                {
                     width: 100%;
                     margin: @pixel-proportion;
                     padding: @pixel-proportion;
@@ -466,15 +528,18 @@
                     .uper-case;
                 }
 
-                & > input {
+                & > input
+                {
                     border-radius: @pixel-proportion * 8;
                 }
 
-                & > textarea {
+                & > textarea
+                {
                     border-radius: @pixel-proportion * 2;
                 }
 
-                & > .photo-upload {
+                & > .photo-upload
+                {
                     position: relative;
 
                     overflow: hidden;
@@ -489,7 +554,8 @@
 
                     .flex(row, center, center);
 
-                    & > #photo-container {
+                    & > #photo-container
+                    {
                         position: absolute;
                         z-index: 1;
                         top: 0;
@@ -503,7 +569,8 @@
                         background-size: cover;
                     }
 
-                    & > #camera-icon {
+                    & > #camera-icon
+                    {
                         position: absolute;
                         z-index: 2;
                         top: 0;
@@ -521,7 +588,8 @@
                         .rmc-texts-large;
                     }
 
-                    & > input {
+                    & > input
+                    {
                         position: relative;
                         z-index: 3;
 
@@ -537,7 +605,8 @@
     }
 }
 
-#contato {
+#contato
+{
     height: 100%;
 
     color: @rmc-white;
@@ -549,42 +618,49 @@
 
     .flex(column, center, center);
 
-    & > .logo-jao {
+    & > .logo-jao
+    {
         width: 250px;
         min-width: 250px;
         height: 250px;
         min-height: 250px;
+        //border: 3px solid @rmc-color-1;
+        //border-radius: 50%;
+        //background-color: @rmc-white;
 
-        border: 3px solid @rmc-color-1;
-        border-radius: 50%;
-        background-color: @rmc-white;
-        background-image: url('../design/logo-meunomeejao-3.svg');
+        background-image: url('../design/riomozillaclub.png');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 80%;
+        background-size: 100%;
     }
 
-    & > span {
+    & > span
+    {
         width: 60%;
         margin: @pixel-proportion * 3;
 
         text-align: center;
     }
 
-    & > .socialmedia-jao {
+    & > .socialmedia-jao
+    {
         .flex(row, center, center);
     }
 
-    & > .organizacao-jao {
+    & > .organizacao-jao
+    {
         .flex(row, center, center);
 
-        & > .nome {
+        & > .nome
+        {
             margin: @pixel-proportion * 3;
 
             .flex(column, center, center);
 
-            & > span {
-                &:first-child {
+            & > span
+            {
+                &:first-child
+                {
                     color: @rmc-color-1;
 
                     .rmc-texts-medium;
@@ -596,7 +672,8 @@
     }
 }
 
-#spotify {
+#spotify
+{
     height: 100%;
     padding: 0;
 
@@ -607,24 +684,28 @@
     background-position: -600px center;
     background-size: 1200px;
 
-    .flex-content {
+    .flex-content
+    {
         width: 100%;
         height: 100%;
 
         .flex(row, center, center);
 
-        & > .left-content {
+        & > .left-content
+        {
             width: 50%;
             height: 100%;
 
             .flex(row, center, center);
 
-            & > h1 {
+            & > h1
+            {
                 color: @rmc-black;
             }
         }
 
-        & > .right-content {
+        & > .right-content
+        {
             width: 50%;
             height: 100%;
         }
