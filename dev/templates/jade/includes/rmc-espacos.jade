@@ -4,9 +4,21 @@ section#espacos
       .flex-content(data-fa-ac=icon, data-l10n-ac=l10n)
 
   ul
-    +line('music', 'rmcIndexEspacosItem1')
+    +line('firefox', 'rmcIndexEspacosItem1')
     +line('tint', 'rmcIndexEspacosItem8')
     +line('book', 'rmcIndexEspacosItem3')
     +line('child', 'rmcIndexEspacosItem4')
     +line('heart', 'rmcIndexEspacosItem5')
+
+
+  mixin line(icon, l10n)
+    li
+      .flex-content(data-fa-ac=icon, data-l10n-ac=l10n)
+
+  ul
+    +line('mobile', 'rmcIndexEspacosItem1')
+    +line('camera-retro', 'rmcIndexEspacosItem8')
+    +line('wrench', 'rmcIndexEspacosItem3')
+    +line('bolt', 'rmcIndexEspacosItem4')
+    +line('gamepad', 'rmcIndexEspacosItem5')
     
