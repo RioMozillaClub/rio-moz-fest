@@ -1,0 +1,101 @@
+.button {
+    min-width: @pixel-proportion * 6;
+    max-width: @pixel-proportion * 50;
+    min-height: @pixel-proportion * 6;
+    max-height: @pixel-proportion * 6;
+    margin: @pixel-proportion;
+    padding: @pixel-proportion;
+
+    border-radius: @pixel-proportion * 8;
+
+    .flex(row, center, center);
+    .border-box;
+    .open-sans-bold;
+    .rmc-texts-small;
+    .uper-case;
+    .cursor-pointer;
+
+    &--super-width {
+        padding-right: @pixel-proportion * 6;
+        padding-left: @pixel-proportion * 6;
+    }
+
+    &--big-icon {
+        font-size: @hSize * .3;
+
+        & > span > i {
+            position: relative;
+            top: -1px;
+        }
+    }
+
+
+    &--transparent {
+        background-color: @rmc-transparent;
+    }
+
+    &--border-dark {
+        color: @rmc-color-2;
+        border: 2px solid @rmc-color-2;
+
+        .transition(.2s);
+
+        &:hover {
+            color: @rmc-white;
+            border: 2px solid @rmc-color-2;
+            background-color: @rmc-color-2;
+        }
+    }
+
+    &--border-white {
+        color: @rmc-white;
+        border: 2px solid @rmc-white;
+
+        .transition(.2s);
+
+        &:hover {
+            color: @rmc-black;
+            border: 2px solid @rmc-white;
+            background-color: @rmc-white;
+        }
+    }
+
+    &--border-black {
+        color: @rmc-black;
+        border: 2px solid @rmc-black;
+
+        .transition(.2s);
+
+        &:hover {
+            color: @rmc-white;
+            border: 2px solid @rmc-black;
+            background-color: @rmc-black;
+        }
+    }
+
+    &--full-color {
+        color: @rmc-white;
+        border: 2px solid @rmc-color-1;
+        background-color: @rmc-color-1;
+
+        .transition(.2s);
+
+        &:hover {
+            border: 2px solid @rmc-color-2;
+            background-color: @rmc-color-2;
+        }
+    }
+
+    &--full-white {
+        color: @rmc-color-1;
+        border: 2px solid @rmc-white;
+        background-color: @rmc-white;
+
+        .transition(.2s);
+
+        &:hover {
+            border: 2px solid @rmc-black;
+            background-color: @rmc-black;
+        }
+    }
+}

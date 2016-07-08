@@ -1,0 +1,19 @@
+nav.nav--close
+  a(href='#home')
+    img.nav-logo(src='design/logo-somostodosjao-peq.svg')
+  span.nav
+    span#nav-icon(data-fa-ac='bars')
+
+    mixin line(link, l10n)
+      li
+        a(href=link, data-l10n-ac=l10n)
+
+    ul
+      +line('#home', 'rmcNavItem11')
+      +line('#ofestival', 'rmcNavItem1')
+      +line('#espacos', 'rmcNavItem3')
+      +line('#programacao', 'rmcNavItem12')
+      +line('#patrocinadores', 'rmcNavItem10')
+      //+line('#spotify', 'rmcNavItem9')
+      //+line('#imprensa', 'rmcNavItem6')
+      +line('#contato', 'rmcNavItem8')

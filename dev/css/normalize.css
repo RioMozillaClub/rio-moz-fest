@@ -1,13 +1,12 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
  */
 
 html {
-  font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -56,6 +55,7 @@ canvas,
 progress,
 video {
   display: inline-block; /* 1 */
+
   vertical-align: baseline; /* 2 */
 }
 
@@ -66,12 +66,13 @@ video {
 
 audio:not([controls]) {
   display: none;
+
   height: 0;
 }
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
 
 [hidden],
@@ -91,12 +92,13 @@ a {
 }
 
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
  */
 
 a:active,
 a:hover {
-  outline: 0;
+  outline: none;
 }
 
 /* Text-level semantics
@@ -134,7 +136,8 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+
+  margin: .67em 0;
 }
 
 /**
@@ -142,8 +145,8 @@ h1 {
  */
 
 mark {
-  background: #ff0;
   color: #000;
+  background: #ff0;
 }
 
 /**
@@ -162,16 +165,18 @@ sub,
 sup {
   font-size: 75%;
   line-height: 0;
+
   position: relative;
+
   vertical-align: baseline;
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 /* Embedded content
@@ -253,9 +258,11 @@ input,
 optgroup,
 select,
 textarea {
-  color: inherit; /* 1 */
   font: inherit; /* 2 */
+
   margin: 0; /* 3 */
+
+  color: inherit; /* 1 */
 }
 
 /**
@@ -287,21 +294,18 @@ select {
  */
 
 button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+/* 1 */
+input[type='reset'],
+input[type='submit'] {
   -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
 }
 
 /**
  * Re-set default cursor for disabled elements.
  */
 
-button[disabled],
-html input[disabled] {
-  cursor: default;
-}
+
 
 /**
  * Remove inner padding and border in Firefox 4+.
@@ -309,8 +313,9 @@ html input[disabled] {
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
   padding: 0;
+
+  border: 0;
 }
 
 /**
@@ -330,8 +335,8 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
@@ -342,20 +347,20 @@ input[type="radio"] {
  * decrement button to change from `default` to `text`.
  */
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
   height: auto;
 }
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
-input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */ /* 2 */
-  box-sizing: content-box;
+input[type='search'] {
+  box-sizing: content-box; /* 2 */
+
+  -webkit-appearance: textfield; /* 1 */
 }
 
 /**
@@ -364,8 +369,8 @@ input[type="search"] {
  * padding (and `textfield` appearance).
  */
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -374,9 +379,10 @@ input[type="search"]::-webkit-search-decoration {
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
+
+  border: 1px solid #c0c0c0;
 }
 
 /**
@@ -385,8 +391,9 @@ fieldset {
  */
 
 legend {
-  border: 0; /* 1 */
   padding: 0; /* 2 */
+
+  border: 0; /* 1 */
 }
 
 /**
@@ -414,8 +421,8 @@ optgroup {
  */
 
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
 td,

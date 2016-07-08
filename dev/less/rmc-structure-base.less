@@ -1,0 +1,65 @@
+//ALL COLORS
+@import 'rmc-color-palette.less';
+
+//FONT STYLES
+@import 'rmc-font-style.less';
+
+//ALL FUNCTIONS AND MIXINS
+@import 'rmc-basic-functions.less';
+
+//BUTTONS
+@import 'rmc-buttons.less';
+
+//CAROUSEL
+@import 'rmc-carousel.less';
+
+//MEDIA QUERY SMALL SCREENS
+@media only screen and (max-width: 640px) {
+    //NAV
+    @import 'rmc-nav-small.less';
+    //TEMPLATES SECTIONS
+    @import 'rmc-templates-styles-small-screen.less';
+}
+
+//MEDIA QUERY MEDIUM SCREENS
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    //NAV
+    @import 'rmc-nav-medium.less';
+    //TEMPLATES SECTIONS
+    @import 'rmc-templates-styles-medium-screen.less';
+}
+
+//MEDIA QUERY LARGE/BIG SCREENS
+@media only screen and (min-width: 1025px) {
+    //NAV
+    @import 'rmc-nav-big.less';
+    //TEMPLATES SECTIONS
+    @import 'rmc-templates-styles-big-screen.less';
+}
+
+
+
+html,
+body {
+    position: absolute !important;
+
+    width: 100% !important;
+    min-width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+
+    text-rendering: optimizeLegibility !important;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+section {
+    position: relative;
+
+    width: 100%;
+    padding: @pixel-proportion * 3;
+
+    .border-box;
+}
