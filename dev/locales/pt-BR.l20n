@@ -5,17 +5,14 @@
 <rmcNavItem2 "edição 2016">
 <rmcNavItem3 "espaços">
 <rmcNavItem4 "inscrições">
-<rmcNavItem5 "fotos">
-<rmcNavItem6 "imprensa">
 <rmcNavItem7 "quem somos">
 <rmcNavItem8 "contato">
-<rmcNavItem9 "spotify">
-<rmcNavItem10 "patrocinadores">
+<rmcNavItem10 "organização">
 <rmcNavItem11 "home">
 <rmcNavItem12 "programação">
 
-<rmcIndexFestival "O Festival">
-<rmcIndexFestival2 "um pouco de história">
+<rmcIndexFestival "Nosso Festival">
+<rmcIndexFestival2 "um pouco sobre o nosso projeto">
 <rmcIndexFestivalTexto "Na primeira edição realizada no Shopping Center Fernandópolis dezenas de artistas locais levaram ao público cerca de 50 horas de muita música, dança, literatura, exposições de fotos e desenhos. Durante dois dias de evento houve uma densa atividade cultural, gerando troca de experiências entre os artistas participantes e levando ao público a surpresa pela produção de conteúdos diversificados em forma e estilo, produzido majoritariamente por fernandopolenses.
 <br><br>Seguindo o sucesso da primeira edição, o Meu Nome é Jão de 2015 levou novamente milhares de pessoas ao Shopping Center para apreciar novamente uma verdadeira explosão de cultura alternativa e independente. Devido à grande repercussão da edição de 2014 desta vez foi necessária a abertura das inscrições para artistas de toda a região, o que aumentou ainda mais o alcance de público e do número de artistas envolvidos.
 <br><br>Durante os três dias de evento ao todo se apresentaram cerca de 123 músicos, seis pintores, cinco fotógrafos, dezenas de dançarinos, artistas plásticos e escritores. Toda essa galera proporcionou quase 70 horas de integração cultural, com shows e exposições que solidificaram o Festival como o maior agregador cultural do Noroeste Paulista.
@@ -51,16 +48,16 @@
 
 <rmcIndexEspacosTitle "espaços">
 <rmcIndexEspacosSubtitle "como e onde a cultura tocará você">
-<rmcIndexEspacosItem1 "palco externo">
-<rmcIndexEspacosItem2 "palco interno">
-<rmcIndexEspacosItem3 "literatura">
-<rmcIndexEspacosItem4 "dança">
-<rmcIndexEspacosItem5 "fotografia">
-<rmcIndexEspacosItem6 "artesanato">
-<rmcIndexEspacosItem7 "teatro">
-<rmcIndexEspacosItem8 "grafitti">
-<rmcIndexEspacosItem9 "artes plásticas">
-<rmcIndexEspacosItem10 "sebo">
+<rmcIndexEspacosItem1 "Mozilla">
+<rmcIndexEspacosItem2 "agua?">
+<rmcIndexEspacosItem3 "educação">
+<rmcIndexEspacosItem4 "facilitadores">
+<rmcIndexEspacosItem5 "comunidade">
+<rmcIndexEspacosItem6 "smartphone">
+<rmcIndexEspacosItem7 "fotografia">
+<rmcIndexEspacosItem8 "faça você mesmo">
+<rmcIndexEspacosItem9 "robótica">
+<rmcIndexEspacosItem10 "games">
 
 <rmcIndexInscricoes1 "inscrições">
 <rmcIndexInscricoes2 "preencha os dados abaixo para participar">
@@ -82,7 +79,7 @@
 <rmcIndexInscricoesButton1 "ENVIAR INSCRIÇÃO">
 
 <rmcIndexContato "contato">
-<rmcIndexContatoSubtitle "Se você quiser patrocinar este evento, ajudar de alguma maneira ou caso você ainda tenha alguma dúvida estamos dispostos a ajudar, envie-nos um e-mail ou entre em contato conosco através de algum dos nossos canais de mídias sociais.">
+<rmcIndexContatoSubtitle "Se você quiser ajudar de alguma maneira ou caso você ainda tenha alguma dúvida, envie-nos um e-mail ou entre em contato conosco através de algum dos nossos canais de mídias sociais.">
 <rmcIndexContatoLuiguiNome "Luigui Delyer">
 <rmcIndexContatoLuiguiEmail "luigui@s1x.com.br">
 <rmcIndexContatoAndreNome "Andre Garzia">
