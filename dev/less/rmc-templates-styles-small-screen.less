@@ -102,7 +102,7 @@
     min-height: 100%;
 
     background-color: @rmc-color-2;
-    background-image: url('../design/logo-meunomeejao-2.svg');
+    background-image: url('../design/bkgnd-azul-01.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 2000%;
@@ -203,7 +203,7 @@
     min-height: 100%;
 
     background-color: @rmc-black;
-    background-image: url('../design/background-meunomeejao-2.svg');
+    background-image: url('../design/bkgnd-grey.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 1000%;
@@ -368,145 +368,12 @@
     }
 }
 
-#inscricoes {
-    height: auto;
-
-    text-align: center;
-
-    color: @rmc-white;
-    background-color: @rmc-black;
-    background-image: url('../design/background-meunomeejao-2.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 700%;
-
-    .dont-select;
-
-    & > h1 {
-        width: 100%;
-        margin-top: @pixel-proportion * 4;
-        margin-right: auto;
-        margin-left: auto;
-
-        .rmc-texts-large;
-    }
-    & > .campos-incricoes {
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-
-        .flex(column, center, center);
-
-        & > .input-group {
-            width: 100%;
-
-            .flex(column, center, center);
-
-            & > .input-item {
-                width: 100%;
-                margin: @pixel-proportion / 2;
-
-                .flex(column, center, center);
-
-                & > label {
-                    .open-sans-light;
-                    .rmc-texts-small;
-                    .lower-case;
-                }
-
-                & > input,
-                & > textarea {
-                    width: 100%;
-                    margin: @pixel-proportion;
-                    padding: @pixel-proportion;
-                    padding-right: @pixel-proportion * 2;
-                    padding-left: @pixel-proportion * 2;
-
-                    color: @rmc-black;
-                    background-color: @rmc-grey-2;
-
-                    .border-box;
-                    .open-sans-bold;
-                    .rmc-texts-small;
-                    .uper-case;
-                }
-
-                & > input {
-                    border-radius: @pixel-proportion * 8;
-                }
-
-                & > textarea {
-                    border-radius: @pixel-proportion * 2;
-                }
-
-                & > .photo-upload {
-                    position: relative;
-
-                    overflow: hidden;
-
-                    width: @pixel-proportion * 30;
-                    height: @pixel-proportion * 20;
-                    margin: @pixel-proportion;
-
-                    border: @pixel-proportion solid @rmc-color-2;
-                    border-radius: @pixel-proportion * 2;
-                    background-color: @rmc-color-1;
-
-                    .flex(row, center, center);
-
-                    & > #photo-container {
-                        position: absolute;
-                        z-index: 1;
-                        top: 0;
-                        left: 0;
-
-                        width: 100%;
-                        height: 100%;
-
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        background-size: cover;
-                    }
-
-                    & > #camera-icon {
-                        font-size: @hSize * .75;
-
-                        position: absolute;
-                        z-index: 2;
-                        top: 0;
-                        left: 0;
-
-                        width: 100%;
-                        height: 100%;
-                        margin-right: auto;
-                        margin-left: auto;
-
-                        color: @rmc-white;
-                        text-shadow: -1px -1px 0 @rmc-color-1, 1px -1px 0 @rmc-color-1, -1px 1px 0 @rmc-color-1, 1px 1px 0 @rmc-color-1;
-
-                        .flex(row,center,center);
-                    }
-
-                    & > input {
-                        position: relative;
-                        z-index: 3;
-
-                        transform: scale(11);
-
-                        opacity: 0;
-                    }
-                }
-            }
-        }
-    }
-}
-
 #contato {
     height: auto;
 
     color: @rmc-white;
-    background-color: @rmc-black;
-    background-image: url('../design/background-meunomeejao-1.svg');
+    background-color: @rmc-color-2;
+    background-image: url('../design/bkgnd-azul-01.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 500%;
@@ -514,18 +381,15 @@
     .flex(column, center, center);
 
     & > .logo-jao {
-        width: 200px;
-        min-width: 200px;
-        height: 200px;
-        min-height: 200px;
+        width: 250px;
+        min-width: 250px;
+        height: 250px;
+        min-height: 250px;
 
-        border: 3px solid @rmc-color-1;
-        border-radius: 50%;
-        background-color: @rmc-white;
-        background-image: url('../design/logo-meunomeejao-3.svg');
+        background-image: url('../design/riomozillaclub.png');
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 80%;
+        background-size: 100%;
     }
 
     & > span {
@@ -556,41 +420,6 @@
                     .open-sans-black;
                 }
             }
-        }
-    }
-}
-
-#spotify {
-    height: 100%;
-    padding: 0;
-
-    color: @rmc-white;
-    background-color: @rmc-white;
-    background-image: url('../design/background-meunomeejao-3.svg');
-    background-repeat: no-repeat;
-    background-position: -600px center;
-    background-size: 1200px;
-
-    .flex-content {
-        width: 100%;
-        height: 100%;
-
-        .flex(row, center, center);
-
-        & > .left-content {
-            width: 50%;
-            height: 100%;
-
-            .flex(row, center, center);
-
-            & > h1 {
-                color: @rmc-black;
-            }
-        }
-
-        & > .right-content {
-            width: 50%;
-            height: 100%;
         }
     }
 }
