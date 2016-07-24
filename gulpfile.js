@@ -94,4 +94,14 @@ gulp.task('watch', function() {
   gulp.watch('dev/img/**', ['copy-img']);
 })
 
-gulp.task('default', ['make-jade', 'make-js', 'make-less', 'copy-html', 'copy-css', 'copy-js', 'copy-l20n', 'copy-design', 'copy-img']);
+gulp.task('default', [
+  'make-jade', 
+  'make-js', 
+  'make-less', 
+  'copy-html', 
+  'copy-css', 
+  'copy-js', 
+  'copy-l20n', 
+  'copy-design', 
+  'copy-img'
+  ]);
