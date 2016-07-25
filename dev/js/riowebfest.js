@@ -40,253 +40,167 @@ showNavIcon();
 
 //FUNCTION TO MOVE SECTIONS SMOOTH
 $('a[href*=#]:not([href=#])').click(function() {
-  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-    if (target.length) {
-      $('html,body').animate({
-        scrollTop: target.offset().top
-      }, 500);
-      verifyNav();
-      return false;
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 500);
+            verifyNav();
+            return false;
+        }
     }
-  }
 });
 
 //FUNCTION TO REPLACE STRINGS
 String.prototype.replaceArray = function (find, replace) {
-  var replaceString = this;
-  for (var i = 0; i < find.length; i++) {
-    var pos = replaceString.indexOf(find[i]);
-    while (pos > -1) {
-      replaceString = replaceString.replace(find[i], replace[i]);
-      pos = replaceString.indexOf(find[i]);
+    var replaceString = this;
+    for (var i = 0; i < find.length; i++) {
+        var pos = replaceString.indexOf(find[i]);
+        while (pos > -1) {
+            replaceString = replaceString.replace(find[i], replace[i]);
+            pos = replaceString.indexOf(find[i]);
+        }
     }
-  }
-  return replaceString;
+    return replaceString;
 };
 
 if(rmcCarousel.length > 0) {
-  $(document).on('keyup', function(event) {
-    event.preventDefault();
-    switch (event.which) {
-      case 39:
-      moveCarousel(1);
-      break;
+    $(document).on('keyup', function(event) {
+        event.preventDefault();
+        switch (event.which) {
+            case 39:
+            moveCarousel(1);
+            break;
 
-      case 37:
-      moveCarousel(2);
-      break;
-    }
-  });
+            case 37:
+            moveCarousel(2);
+            break;
+        }
+    });
 }
 
 $(window).scroll(function (event) {
-  showNavIcon();
+    showNavIcon();
 });
 
 $(rmcMoveCarouselRight).on('click', function(event) {
-  event.preventDefault();
-  moveCarousel(1);
+    event.preventDefault();
+    moveCarousel(1);
 });
 
 $(rmcMoveCarouselLeft).on('click', function(event) {
-  event.preventDefault();
-  moveCarousel(2);
+    event.preventDefault();
+    moveCarousel(2);
 });
 
 if (rmcNavMenu.length > 0) {
-  $(iconNav).on('click', function(event) {
-    event.preventDefault();
-    toggleNav();
-  });
+    $(iconNav).on('click', function(event) {
+        event.preventDefault();
+        toggleNav();
+    });
 }
 
 $(sectionPage).on('click', function(event) {
-  // event.preventDefault();
-  verifyNav();
+    // event.preventDefault();
+    verifyNav();
 });
 
 function verifyNav() {
-  if(rmcNavMenu.hasClass('nav--open')){
-    toggleNav();
-  }
+    if(rmcNavMenu.hasClass('nav--open')){
+        toggleNav();
+    }
 }
 
 function toggleNav() {
-  $(rmcNavMenu).toggleClass('nav--close nav--open');
+    $(rmcNavMenu).toggleClass('nav--close nav--open');
 }
 
 function showNavIcon() {
-  if ($(window).width() >= 641) {
-    if ($(window).scrollTop() >= $("section").height() && rmcNavMenu.hasClass('nav--close')) {
-      srjNavLogo.style.cursor = 'pointer';
-      srjNavLogo.style.opacity = '1';
-    }
-    else {
-      srjNavLogo.style.cursor = 'auto';
-      srjNavLogo.style.opacity = '0';
+    if ($(window).width() >= 641) {
+        if ($(window).scrollTop() >= $("section").height() && rmcNavMenu.hasClass('nav--close')) {
+            srjNavLogo.style.cursor = 'pointer';
+            srjNavLogo.style.opacity = '1';
+        }
+        else {
+            srjNavLogo.style.cursor = 'auto';
+            srjNavLogo.style.opacity = '0';
 
+        }
     }
-  }
 }
 
 function moveCarousel(op){
-  leftCarousel = $(rmcCarousel).css('left');
-  imgCarousel = $(rmcImgCarousel).css("width");
-  var find = ["px"];
-  var replace = [""];
-  leftCarousel = leftCarousel.replaceArray(find, replace);
-  imgCarousel = parseInt(imgCarousel.replaceArray(find, replace));
+    leftCarousel = $(rmcCarousel).css('left');
+    imgCarousel = $(rmcImgCarousel).css("width");
+    var find = ["px"];
+    var replace = [""];
+    leftCarousel = leftCarousel.replaceArray(find, replace);
+    imgCarousel = parseInt(imgCarousel.replaceArray(find, replace));
 
-  if(op == 1){
-    var limitCarousel = (imgCarousel * 8) * -1;
+    if(op == 1){
+        var limitCarousel = (imgCarousel * 8) * -1;
 
-    if(leftCarousel >= limitCarousel){
-      $(rmcCarousel).css("left", ((imgCarousel * idCarousel) * -1));
-      idCarousel++;
+        if(leftCarousel >= limitCarousel){
+            $(rmcCarousel).css("left", ((imgCarousel * idCarousel) * -1));
+            idCarousel++;
+        }
     }
-  }
-  else if(op == 2){
-    var limitCarousel = (imgCarousel * -1);
+    else if(op == 2){
+        var limitCarousel = (imgCarousel * -1);
 
-    if(leftCarousel <= limitCarousel){
-      idCarousel = idCarousel - 1;
-      $(rmcCarousel).css("left", imgCarousel * (idCarousel - 1) * -1);
+        if(leftCarousel <= limitCarousel){
+            idCarousel = idCarousel - 1;
+            $(rmcCarousel).css("left", imgCarousel * (idCarousel - 1) * -1);
+        }
     }
-  }
-  else if(op == 3){
-    if(idCarousel <= 9){
-      moveCarousel(1);
-    }
-    else if(idCarousel = 10){
-      idCarousel = 2;
-      moveCarousel(2);
-    }
+    else if(op == 3){
+        if(idCarousel <= 9){
+            moveCarousel(1);
+        }
+        else if(idCarousel = 10){
+            idCarousel = 2;
+            moveCarousel(2);
+        }
 
-    setTimeout(function(){moveCarousel(3)}, 5000);
-  }
+        setTimeout(function(){moveCarousel(3)}, 5000);
+    }
 }
 
-rmcPhotoUpload.change(function (event) {
-  postPic(event);
+
+var icon = new H.map.Icon('design/marker-map-01.png'),
+coords = {lat: -22.908011, lng: -43.195984};
+
+var platform = new H.service.Platform({
+    app_id: 'b7JSC5ZyD0bHxspZC4vR',
+    app_code: '38SINqnVFyzG4iWf7obngQ',
+    useCIT: true,
+    useHTTPS: true
+});
+var defaultLayers = platform.createDefaultLayers();
+
+var map = new H.Map(document.getElementById('mapa-layer'),
+defaultLayers.satellite.map,{
+    center: {lat: coords.lat, lng: coords.lng},
+    zoom: 15
 });
 
-rmcButtonSendForm.click(function () {
-  if(rmcFormNome.val() != "" && rmcFormTipo.val() != "" && rmcFormGenero.val() != "" && rmcFormIntegrantes.val() != "" && rmcFormResponsavel.val() != "" && rmcFormDoc.val() != "" && rmcFormFacebook.val() != "" && rmcFormEmail.val() != "" && rmcFormTelefone.val() != "" && rmcFormEndereco.val() != "" && rmcFormCidade.val() != "" && rmcFormEstado.val() != "" && rmcFormDescricao.val() != ""){
+var ui = H.ui.UI.createDefault(map, defaultLayers, 'pt-BR');
+enableTrafficInfo(map);
 
-    if(rmcButtonSendForm.hasClass("noclick") === true) {
-      criarFormInputFields();
-    }
-    else
-    {
-      swal("Oops...", "Só é possível enviar uma inscrição por vez!", "error");
-    }
-  }
-  else
-  {
-      swal("Oops...", "Verifique os campos que são obrigatórios pra você.", "error");
-  }
-});
-
-function postPic(event){
-  formPic = new FormData();
-  formPic.append("uploadfile", event.target.files[0]);
-
-  $.ajax({
-    url: "//www.somostodosjao.com.br/api/upload.php",
-    global: false,
-    data: formPic,
-    cache: false,
-    processData: false,
-    contentType: false,
-    type: "POST",
-    beforeSend: function(){
-      rmcCameraIcon.removeClass("fa-camera fa-times-circle");
-      rmcCameraIcon.addClass("fa-cog fa-spin");
-      rmcFormPhoto.val('');
-    },
-    complete: function() {
-      rmcCameraIcon.removeClass("fa-camera fa-spin fa-cog");
-      rmcCameraIcon.addClass("fa-times-circle");
-    },
-    success: function(response){
-      if(response === "2"){
-        swal("Erro ao enviar sua foto", "Só é possível enviar arquivos do tipo JPG.\nVerifique sua foto e tente novamente...", "error")
-      } else {
-        rmcPhotoContainer.css('background-image', 'url(//www.somostodosjao.com.br/tekoa/content/'+response+')');
-        rmcFormPhoto.val(response);
-      }
-    }
-  });
+function enableTrafficInfo (map) {
+    map.setBaseLayer(defaultLayers.satellite.traffic);
 }
+var mapSettings = ui.getControl('mapsettings');
+var zoom = ui.getControl('zoom');
+var scalebar = ui.getControl('scalebar');
+var panorama = ui.getControl('panorama');
 
-function criarFormInputFields(){
-  formFields = new FormData();
+// mapSettings.setAlignment('top-right');
+scalebar.setVisibility(0);
 
-  formFields.append("foto", rmcFormPhoto.val().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("nome", rmcFormNome.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("tipo", rmcFormTipo.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("genero", rmcFormGenero.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("integrantes", rmcFormIntegrantes.val().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("responsavel", rmcFormResponsavel.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("documento", rmcFormDoc.val().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("facebook", rmcFormFacebook.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("email", rmcFormEmail.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("telefone", rmcFormTelefone.val().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("endereco", rmcFormEndereco.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("cidade", rmcFormCidade.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("estado", rmcFormEstado.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("descricao", rmcFormDescricao.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  formFields.append("youtube", rmcFormYoutube.val().toUpperCase().replace(/<\/?[^>]+(>|$)/g, " "));
-  postInfo("inscricoes_2016");
-}
-
-function limpaInputs() {
-  rmcFormPhoto.val('');
-  rmcFormNome.val('');
-  rmcFormTipo.val('');
-  rmcFormGenero.val('');
-  rmcFormIntegrantes.val('');
-  rmcFormResponsavel.val('');
-  rmcFormDoc.val('');
-  rmcFormFacebook.val('');
-  rmcFormEmail.val('');
-  rmcFormTelefone.val('');
-  rmcFormEndereco.val('');
-  rmcFormCidade.val('');
-  rmcFormEstado.val('');
-  rmcFormDescricao.val('');
-  rmcFormYoutube.val('');
-}
-
-function postInfo(tabela){
-  $.ajax({
-    url: "//www.somostodosjao.com.br/api/savedata.php?t="+tabela,
-    global: false,
-    data: formFields,
-    cache: false,
-    processData: false,
-    contentType: false,
-    type: "POST",
-    beforeSend: function(){
-      rmcButtonSendForm.html('SALVANDO...').removeClass("noclick");
-    },
-    success: function(response){
-      if(response != "1"){
-        rmcButtonSendForm.html('TENTE NOVAMENTE!').css("background", "#FFF").css("color", "#000");
-      }
-      else
-      {
-        rmcButtonSendForm.html('PRONTO!').removeClass("noclick");
-        // limpaInputs();
-        swal({
-          title: "Quase pronto!",
-          text: "Faça o download do termo de participante aqui em <a style='color:#000;' href='termo-do-participante-meu-nome-e-jao-doc.doc'><b>Word (.doc)</b></a> ou <a style='color:#000;' href='termo-do-participante-meu-nome-e-jao-odt.doc'><b>Libre Office (.odt)</b></a>, preencha, imprima e assine.<br>A apresentação deste documento é obrigatória para todos os artistas.<br><br>Para mais instruções, aguarde pois entraremos em contato em breve.",
-          html: true,
-          type: "success"
-        });
-      }
-    }
-  });
-}
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map)).disable();
+var marker = new H.map.Marker(coords, { icon: icon });
+map.addObject(marker);
+map.setCenter(coords);

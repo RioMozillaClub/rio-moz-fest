@@ -60,8 +60,9 @@
             }
 
             & > .home-logo {
+                color: #fff;
+
                 .flex(column, center, center);
-                color: #FFFFFF;
 
                 & > hr {
                     width: 400px;
@@ -464,5 +465,54 @@
                 }
             }
         }
+    }
+}
+
+#mapa {
+    height: 100%;
+
+    & > h1 {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+
+        text-align: center;
+
+        color: @rmc-white;
+    }
+    & > h2 {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        margin-top: @pixel-proportion * -3;
+
+        text-align: center;
+
+        color: @rmc-white;
+
+        & > span > span {
+            position: relative;
+            top: @pixel-proportion * 2;
+
+            padding: @pixel-proportion;
+            padding-right: @pixel-proportion * 2;
+            padding-left: @pixel-proportion * 2;
+
+            color: @rmc-color-1;
+            border-radius: @pixel-proportion;
+            background-color: @rmc-white;
+        }
+    }
+
+    & > #mapa-layer {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
     }
 }

@@ -7,6 +7,7 @@
 <rmcNavItem4 "inscrições">
 <rmcNavItem7 "quem somos">
 <rmcNavItem8 "contato">
+<rmcNavItem9 "local">
 <rmcNavItem10 "organização">
 <rmcNavItem11 "home">
 <rmcNavItem12 "programação">
@@ -91,9 +92,8 @@
 <rmcIndexContatoAndreEmail "andre@andregarzia.com">
 
 
-<rmcIndexSpotify "spotify do jão">
-<rmcIndexSpotifySubtitle "Vem ouvir música boa com a gente!">
-<rmcIndexSpotifyTexto "Para quem nunca ouviu falar do Spotify, a gente explica: É um aplicativo para todos os windows/mac/ios/android e web que toca a música que você quer, quando você quer, simples assim. Você só precisar acessar o site do app pela web ou baixá-lo em seu smartphone/tablet, e com ele é possível até criar suas playlists com as músicas que você mais ama! Não é incrível?! E como não poderíamos ficar para traz, o Evento Cultural "Meu Nome é Jão" criou uma playlist para vocês curtirem enquanto esperam pelo festival o/">
+<rmcIndexMapa "local">
+<rmcIndexMapaSubtitle "Onde acontecerá nosso festival<br><span>Rua Benedicto Hipólito 01, Centro, Rio de Janeiro</span>">
 
 <rmcIndexPatrocinadores1 "organização">
 <rmcIndexPatrocinadores2 "divulgação">
