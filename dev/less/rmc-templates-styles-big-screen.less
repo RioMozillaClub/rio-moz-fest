@@ -217,6 +217,121 @@
     }
 }
 
+
+#facilitadores {
+    height: auto;
+    min-height: 100%;
+
+    background-color: @rmc-color-2;
+    background-image: url('../design/bkgnd-azul-01.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 250%;
+
+    & > .texto-facilitadores {
+        width: 60%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: @pixel-proportion * 6;
+
+        text-align: center;
+
+        .flex(column, center, center);
+
+        & > img {
+            width: 300px;
+        }
+
+        & > h1 {
+            width: 100%;
+            margin-top: @pixel-proportion * -2;
+
+            color: @rmc-white;
+            background-color: unset !important;
+        }
+
+        & > h2 {
+            position: relative;
+            top: -20px;
+
+            color: @rmc-white;
+        }
+
+        & > h3 {
+            text-align: center;
+
+            color: @rmc-color-2;
+            //border-radius: @pixel-proportion * 3;
+            background-color: @rmc-white;
+            display: block;
+            width: 100%;
+            font-size: 1.05rem;
+            padding-top: 8px;
+        }
+
+        & > p {
+            position: relative;
+
+            padding: @pixel-proportion * 3;
+
+            color: @rmc-color-2;
+            //border-radius: @pixel-proportion * 3;
+            background-color: @rmc-white;
+
+            .border-box;
+        }
+
+        & > #patrocinadores {
+            width: 100%;
+            height: auto;
+            padding: @pixel-proportion * 3;
+
+            border-radius: @pixel-proportion * 2;
+            background-color: @rmc-color-1;
+
+            .border-box;
+
+            & > .flex-content {
+                width: 100%;
+                height: auto;
+
+                & > h2 {
+                    margin-top: @pixel-proportion;
+                    margin-bottom: @pixel-proportion;
+
+                    color: @rmc-white;
+                }
+
+                & > .top-content {
+                    width: 100%;
+                    height: auto;
+
+                    .flex(row, center, center);
+
+                    & img {
+                        max-width: 260px;
+                        max-height: 150px;
+                        padding: @pixel-proportion;
+                    }
+                }
+
+                & > .bottom-content {
+                    width: 100%;
+                    height: auto;
+
+
+                    & img {
+                        height: 50px;
+                        padding: @pixel-proportion;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 #programacao {
     height: auto;
     min-height: 100%;
